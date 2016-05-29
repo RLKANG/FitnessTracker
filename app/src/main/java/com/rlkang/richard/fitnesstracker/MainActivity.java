@@ -3,16 +3,9 @@ package com.rlkang.richard.fitnesstracker;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.hardware.Sensor;
-import android.hardware.SensorManager;
-import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
-
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Workout_Log (View view) {
-        String parts[] = new String[] {"Arms", "Shoulders", "Chest", "Back", "Legs", "Other"};
+        String parts[] = new String[] {"Arms", "Shoulders", "Chest", "Back", "Legs"};
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Select Body Part");
@@ -38,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Send_To_SelectionPanel (int num) {
-        String parts[] = new String[] {"Arms", "Shoulders", "Chest", "Back", "Legs", "Other"};
+        String parts[] = new String[] {"Arms", "Shoulders", "Chest", "Back", "Legs"};
         String choice= parts[num];
 
         Intent intent = new Intent(this, SelectionPanel.class);
