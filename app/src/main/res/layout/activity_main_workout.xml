@@ -32,7 +32,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/exercise"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="invisible">
 
         <TextView
             android:id="@+id/set1"
@@ -54,10 +55,9 @@
             android:labelFor="@+id/wselect1"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:text="@string/select"
             android:textSize="12sp"
             android:layout_marginStart="10dp"
-            android:focusable="false" />
+            android:inputType="numberDecimal" />
 
         <TextView
             android:id="@+id/rtext1"
@@ -72,10 +72,9 @@
             android:labelFor="@+id/rselect1"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:text="@string/select"
             android:textSize="12sp"
             android:layout_marginStart="10dp"
-            android:focusable="false" />
+            android:inputType="number" />
     </LinearLayout>
 
     <LinearLayout
@@ -83,7 +82,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/lin1C"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="invisible">
 
         <TextView
             android:id="@+id/set2"
@@ -105,10 +105,9 @@
             android:labelFor="@+id/wselect2"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:text="@string/select"
             android:textSize="12sp"
             android:layout_marginStart="10dp"
-            android:focusable="false" />
+            android:inputType="numberDecimal" />
 
         <TextView
             android:id="@+id/rtext2"
@@ -123,10 +122,9 @@
             android:labelFor="@+id/rselect2"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:text="@string/select"
             android:textSize="12sp"
             android:layout_marginStart="10dp"
-            android:focusable="false" />
+            android:inputType="number" />
     </LinearLayout>
 
     <LinearLayout
@@ -134,7 +132,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/lin2C"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="invisible">
 
         <TextView
             android:id="@+id/set3"
@@ -156,10 +155,9 @@
             android:labelFor="@+id/wselect3"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:text="@string/select"
             android:textSize="12sp"
             android:layout_marginStart="10dp"
-            android:focusable="false" />
+            android:inputType="numberDecimal" />
 
         <TextView
             android:id="@+id/rtext3"
@@ -174,10 +172,9 @@
             android:labelFor="@+id/rselect3"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:text="@string/select"
             android:textSize="12sp"
             android:layout_marginStart="10dp"
-            android:focusable="false" />
+            android:inputType="number" />
     </LinearLayout>
 
     <LinearLayout
@@ -185,7 +182,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/lin3C"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="invisible">
 
         <TextView
             android:id="@+id/set4"
@@ -207,10 +205,9 @@
             android:labelFor="@+id/wselect4"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:text="@string/select"
             android:textSize="12sp"
             android:layout_marginStart="10dp"
-            android:focusable="false" />
+            android:inputType="numberDecimal" />
 
         <TextView
             android:id="@+id/rtext4"
@@ -225,10 +222,9 @@
             android:labelFor="@+id/rselect4"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:text="@string/select"
             android:textSize="12sp"
             android:layout_marginStart="10dp"
-            android:focusable="false" />
+            android:inputType="number" />
     </LinearLayout>
 
     <LinearLayout
@@ -236,7 +232,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/lin4C"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="invisible">
 
         <TextView
             android:id="@+id/set5"
@@ -258,10 +255,9 @@
             android:labelFor="@+id/wselect5"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:text="@string/select"
             android:textSize="12sp"
             android:layout_marginStart="10dp"
-            android:focusable="false" />
+            android:inputType="numberDecimal" />
 
         <TextView
             android:id="@+id/rtext5"
@@ -276,10 +272,9 @@
             android:labelFor="@+id/rselect5"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:text="@string/select"
             android:textSize="12sp"
             android:layout_marginStart="10dp"
-            android:focusable="false" />
+            android:inputType="number" />
     </LinearLayout>
 
     <LinearLayout
@@ -287,7 +282,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/lin5C"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="invisible">
 
         <TextView
             android:id="@+id/set6"
@@ -309,10 +305,9 @@
             android:labelFor="@+id/wselect6"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:text="@string/select"
             android:textSize="12sp"
             android:layout_marginStart="10dp"
-            android:focusable="false" />
+            android:inputType="numberDecimal" />
 
         <TextView
             android:id="@+id/rtext6"
@@ -327,10 +322,9 @@
             android:labelFor="@+id/rselect6"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:text="@string/select"
             android:textSize="12sp"
             android:layout_marginStart="10dp"
-            android:focusable="false" />
+            android:inputType="number" />
     </LinearLayout>
 
     <LinearLayout
@@ -338,7 +332,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/lin6C"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="invisible">
 
         <TextView
             android:id="@+id/set7"
@@ -360,10 +355,9 @@
             android:labelFor="@+id/wselect7"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:text="@string/select"
             android:textSize="12sp"
             android:layout_marginStart="10dp"
-            android:focusable="false" />
+            android:inputType="numberDecimal" />
 
         <TextView
             android:id="@+id/rtext7"
@@ -378,10 +372,9 @@
             android:labelFor="@+id/rselect7"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:text="@string/select"
             android:textSize="12sp"
             android:layout_marginStart="10dp"
-            android:focusable="false" />
+            android:inputType="number" />
     </LinearLayout>
 
     <LinearLayout
@@ -389,7 +382,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/lin7C"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="invisible">
 
         <TextView
             android:id="@+id/set8"
@@ -411,10 +405,9 @@
             android:labelFor="@+id/wselect8"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:text="@string/select"
             android:textSize="12sp"
             android:layout_marginStart="10dp"
-            android:focusable="false" />
+            android:inputType="numberDecimal" />
 
         <TextView
             android:id="@+id/rtext8"
@@ -429,10 +422,9 @@
             android:labelFor="@+id/rselect8"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:text="@string/select"
             android:textSize="12sp"
             android:layout_marginStart="10dp"
-            android:focusable="false" />
+            android:inputType="number" />
     </LinearLayout>
 
     <Button

@@ -1,6 +1,7 @@
 package com.rlkang.richard.fitnesstracker;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class SelectionPanel extends AppCompatActivity {
 
@@ -105,27 +107,45 @@ public class SelectionPanel extends AppCompatActivity {
     }
 
     public void Select_Sets (View view) {
-        int count_exercises=0;
-        for (int i=0; i<6; i++) {
+        boolean select = false;
+        for (int i = 0; i < 6; i++) {
             if (!exercises_text[i].getText().toString().equals("Select...")) {
-                count_exercises++;
+                select = true;
+                break;
             }
         }
 
-        String selected[]= new String[count_exercises];
-        int j=0;
-        for (int i=0; i<6; i++) {
-            if (!exercises_text[i].getText().toString().equals("Select...")) {
-                selected[j] = exercises_text[i].getText().toString();
-                j++;
+        if (select) {
+            int count_exercises = 0;
+            for (int i = 0; i < 6; i++) {
+                if (!exercises_text[i].getText().toString().equals("Select...")) {
+                    count_exercises++;
+                }
             }
-        }
 
-        Intent intent = new Intent(this, SelectSets.class);
-        intent.putExtra(i_count_exercises, count_exercises);
-        intent.putExtra(i_selected, selected);
-        intent.putExtra(i_mode, mode);
-        startActivity(intent);
+            String selected[] = new String[count_exercises];
+            int j = 0;
+            for (int i = 0; i < 6; i++) {
+                if (!exercises_text[i].getText().toString().equals("Select...")) {
+                    selected[j] = exercises_text[i].getText().toString();
+                    j++;
+                }
+            }
+
+            Intent intent = new Intent(this, SelectSets.class);
+            intent.putExtra(i_count_exercises, count_exercises);
+            intent.putExtra(i_selected, selected);
+            intent.putExtra(i_mode, mode);
+            startActivity(intent);
+        }
+        else {
+            Context context = getApplicationContext();
+            CharSequence text = "Select at least one exercise";
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+        }
     }
 
 }

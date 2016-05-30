@@ -1,6 +1,7 @@
 package com.rlkang.richard.fitnesstracker;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class SelectSets extends AppCompatActivity {
     public final static String i_count_exercises = "com.RLKANG.fitnesstracker.count_exercises";
@@ -94,12 +96,30 @@ public class SelectSets extends AppCompatActivity {
     }
 
 
-    public void Start_Workout (View view) { //Save onto file here???
-        Intent intent = new Intent(this, MainWorkout.class);
-        intent.putExtra(i_count_exercises, count_exercises);
-        intent.putExtra(i_selected, selected);
-        intent.putExtra(i_mode, mode);
-        intent.putExtra(i_sets, sets);
-        startActivity(intent);
+    public void Start_Workout (View view) {//Save onto file here???
+        boolean select = true;
+        for (int i = 0; i < 6; i++) {
+            if (et[i].getText().toString().equals("Select...") && ll[i].getVisibility()==View.VISIBLE) {
+                select = false;
+                break;
+            }
+        }
+
+        if (select) {
+            Intent intent = new Intent(this, MainWorkout.class);
+            intent.putExtra(i_count_exercises, count_exercises);
+            intent.putExtra(i_selected, selected);
+            intent.putExtra(i_mode, mode);
+            intent.putExtra(i_sets, sets);
+            startActivity(intent);
+        }
+        else {
+            Context context = getApplicationContext();
+            CharSequence text = "Select at least one set for each exercise";
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+        }
     }
 }
